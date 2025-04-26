@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-surface-800 dark:text-surface-100;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold;
+  }
+}
+
+@layer components {
+  .calculator-btn {
+    @apply flex items-center justify-center h-14 rounded-xl text-lg font-medium transition-all duration-200 active:scale-95;
+  }
+  
+  .digit-btn {
+    @apply calculator-btn bg-white dark:bg-surface-700 text-surface-800 dark:text-surface-100 hover:bg-surface-100 dark:hover:bg-surface-600 shadow-neu-light dark:shadow-neu-dark;
+  }
+  
+  .operation-btn {
+    @apply calculator-btn bg-primary-light/10 dark:bg-primary-dark/20 text-primary-dark dark:text-primary-light hover:bg-primary-light/20 dark:hover:bg-primary-dark/30 shadow-neu-light dark:shadow-neu-dark;
+  }
+  
+  .special-btn {
+    @apply calculator-btn bg-secondary-light/10 dark:bg-secondary-dark/20 text-secondary-dark dark:text-secondary-light hover:bg-secondary-light/20 dark:hover:bg-secondary-dark/30 shadow-neu-light dark:shadow-neu-dark;
+  }
+  
+  .equals-btn {
+    @apply calculator-btn bg-accent/90 text-white hover:bg-accent shadow-neu-light dark:shadow-neu-dark;
+  }
+  
+  .clear-btn {
+    @apply calculator-btn bg-surface-200 dark:bg-surface-600 text-surface-800 dark:text-surface-100 hover:bg-surface-300 dark:hover:bg-surface-500 shadow-neu-light dark:shadow-neu-dark;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .calculator-display {
+    font-variant-numeric: tabular-nums;
+  }
+}
