@@ -31,7 +31,7 @@ function App() {
             transition={{ duration: 1, ease: "easeInOut" }}
             className="text-primary-dark dark:text-primary-light font-bold text-2xl"
           >
-            Calcu<span className="text-accent">Mate</span>
+            Calculator<span className="text-accent">Me</span>
           </motion.div>
         </div>
         <motion.button
@@ -56,7 +56,7 @@ function App() {
       </main>
       
       <footer className="py-4 px-6 text-center text-sm text-surface-500 dark:text-surface-400 bg-white dark:bg-surface-800 border-t border-surface-200 dark:border-surface-700">
-        <p>© {new Date().getFullYear()} CalcuMate. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} CalculatorMe. All rights reserved.</p>
       </footer>
     </div>
   );
