@@ -32,7 +32,7 @@ const Home = () => {
         className="mb-8 text-center"
       >
         <h1 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-          Welcome to calcworkd
+          Welcome to calc-world
         </h1>
         <p className="text-surface-600 dark:text-surface-300 max-w-2xl mx-auto">
           Your smart calculation companion with memory functions and history tracking
