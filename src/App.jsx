@@ -31,7 +31,7 @@ function App() {
             transition={{ duration: 1, ease: "easeInOut" }}
             className="text-primary-dark dark:text-primary-light font-bold text-2xl"
           >
-            Vivek <span className="text-accent">Gotraj</span> Calculator
+            VG <span className="text-accent">Calcy</span>
           </motion.div>
         </div>
         <motion.button
@@ -56,7 +56,7 @@ function App() {
       </main>
       
       <footer className="py-4 px-6 text-center text-sm text-surface-500 dark:text-surface-400 bg-white dark:bg-surface-800 border-t border-surface-200 dark:border-surface-700">
-        <p>© {new Date().getFullYear()} Vivek Gotraj Calculator. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} VG Calcy. All rights reserved.</p>
       </footer>
     </div>
   );
