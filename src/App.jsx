@@ -58,8 +58,8 @@ function App() {
 
       <footer className="py-4 px-6 text-center text-sm text-surface-500 dark:text-surface-400 bg-white dark:bg-surface-800 border-t border-surface-200 dark:border-surface-700">
         <p>
-          Vivek Gotraj © {new Date().getFullYear()} VG-Calcy-2. All rights
-          reserved.
+          Vivek Gotraj Copyright © {new Date().getFullYear()} VG-Calcy-2. All
+          rights reserved.
         </p>
       </footer>
     </div>
