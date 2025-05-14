@@ -1,31 +1,32 @@
-import { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { Moon, Sun } from 'lucide-react';
-import { motion } from 'framer-motion';
-import Home from './pages/Home';
-import NotFound from './pages/NotFound';
+import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import { Moon, Sun } from "lucide-react";
+import { motion } from "framer-motion";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
-    const savedMode = localStorage.getItem('darkMode');
-    return savedMode ? JSON.parse(savedMode) : 
-      window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedMode = localStorage.getItem("darkMode");
+    return savedMode
+      ? JSON.parse(savedMode)
+      : window.matchMedia("(prefers-color-scheme: dark)").matches;
   });
 
   useEffect(() => {
     if (darkMode) {
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
     }
-    localStorage.setItem('darkMode', JSON.stringify(darkMode));
+    localStorage.setItem("darkMode", JSON.stringify(darkMode));
   }, [darkMode]);
 
   return (
     <div className="min-h-screen flex flex-col transition-colors duration-300">
       <header className="py-4 px-6 flex justify-between items-center bg-white dark:bg-surface-800 shadow-sm">
         <div className="flex items-center gap-2">
-          <motion.div 
+          <motion.div
             initial={{ rotate: 0 }}
             animate={{ rotate: 360 }}
             transition={{ duration: 1, ease: "easeInOut" }}
@@ -47,16 +48,19 @@ function App() {
           )}
         </motion.button>
       </header>
-      
+
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-      
+
       <footer className="py-4 px-6 text-center text-sm text-surface-500 dark:text-surface-400 bg-white dark:bg-surface-800 border-t border-surface-200 dark:border-surface-700">
-        <p>© {new Date().getFullYear()} VG-Calcy-2. All rights reserved.</p>
+        <p>
+          Vivek Gotraj © {new Date().getFullYear()} VG-Calcy-2. All rights
+          reserved.
+        </p>
       </footer>
     </div>
   );
